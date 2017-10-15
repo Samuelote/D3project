@@ -1,0 +1,24 @@
+@font-face { font-family: 'Enso'; src: url('./enso.ttf') format('truetype'); font-weight: normal;
+  font-style: normal;}
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+  .title {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+  }
+
+body {
+  background: linear-gradient(to left, #5bd3c5, #1e9e8f);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.BookingTime {
+  font-size: 2em;
+  width: 250px;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+.leadTime {
+  transform: translate(500,100);
+}

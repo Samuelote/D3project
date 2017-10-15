@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+.title {
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Catamaran', sans-serif;
+  color: green;
+}
