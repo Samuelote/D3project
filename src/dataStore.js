@@ -5,7 +5,7 @@ import MainObj from './Data.js';
 export class dataStore {
   constructor(){
     extendObservable(this, {
-      tourName: "Broadway Public Sunday-Wednesday Tour",
+      tourName: "SoBro Public Tour",
       listOfNames: Object.keys(MainObj),
       setCurrentTour: action((name) => this.tourName = name),
       currentTour: computed(() => MainObj[this.tourName]),

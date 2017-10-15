@@ -37,7 +37,7 @@ const BarChart = observer(class BarChart extends Component {
   }
   setContext() {
     return d3.select(this.refs.main).append('svg')
-      .attr('transform', `translate(20,-150)`)
+      .attr('transform', `translate(20,-200)`)
       .attr('height', 650)
       .attr('width', 337)
       .attr('id', 'mainSvg');
@@ -64,7 +64,7 @@ const BarChart = observer(class BarChart extends Component {
       .attr('id', 'bars')
       .attr('height', 300)
       .attr('width', 130)
-      .attr('transform', `translate(181,-556)`)
+      .attr('transform', `translate(181,-606)`)
       .append('g');
     bar.append('rect')
         .attr('height', bar1).attr('width', 40)

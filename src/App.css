@@ -11,14 +11,3 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
 }
-
-.BookingTime {
-  font-size: 2em;
-  width: 250px;
-  display: flex;
-  justify-content: right;
-  align-items: right;
-}
-.leadTime {
-  transform: translate(500,100);
-}
