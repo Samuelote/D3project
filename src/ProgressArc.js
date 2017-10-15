@@ -59,12 +59,12 @@ class ProgressArc extends Component {
   setContext() {
     const { id } = this.props;
     return d3.select(this.refs.arc).append('svg')
-      .attr('height', 267)
-      .attr('width', 250)
-      .attr('transform', `translate(500,-950)`)
+      .attr('height', 300)
+      .attr('width', 300)
+      .attr('transform', `translate(450,-1000)`)
       .attr('id', id)
       .append('g')
-      .attr('transform', `translate(120,120)`);
+      .attr('transform', `translate(150,150)`);
   }
   labels(context){
     const text = context.append('path')

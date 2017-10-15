@@ -10,7 +10,6 @@ import Value from './DropDownMenu';
 const App = observer(class App extends Component {
 
   render() {
-    const { averageCap } = this.props.store;
     return(
       <div>
         < Value
@@ -25,13 +24,13 @@ const App = observer(class App extends Component {
           store = { this.props.store }/>
           < ProgressArc
               height={300}
-              width={300}
-              innerRadius={90}
-              outerRadius={120}
+              width={350}
+              innerRadius={120}
+              outerRadius={150}
               id="d3-arc"
               backgroundColor="#e6e6e6"
               foregroundColor="#f29d35"
-              averageCap={averageCap}
+              averageCap={this.props.store.averageCap}
               duration={2000}
           />
       </div>
