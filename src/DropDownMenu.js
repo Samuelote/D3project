@@ -15,12 +15,9 @@ const Value = observer(class Value extends Component {
     bookingTime: PropsTypes.number,
   }
 
-  value(e){
-    console.log(this.props.store.bar1);
-  }
 
   render(){
-    const { listOfNames, setCurrentTour, average, bookingTime } = this.props.store;
+    const { listOfNames, setCurrentTour, average, bookingTime, tourName } = this.props.store;
     return(
     <div>
     <div className='tour-content'>
@@ -31,7 +28,7 @@ const Value = observer(class Value extends Component {
       }
       </ul>
       </div>
-    <h1 onClick = {this.value.bind(this)} className = 'title'>{this.props.store.tourName}</h1>
+    <h1 className = 'title'>{tourName}</h1>
     <h2 className = 'averageCap'>{average}</h2>
     <h2 className = 'leadTime'>{bookingTime}</h2>
     </div>

@@ -19,7 +19,6 @@ class ProgressArc extends Component {
 
   componentDidMount() {
     this.drawArc();
-    // console.log(d3.select(`#${this.props.id}`);
   }
   componentDidUpdate() {
     this.redrawArc();

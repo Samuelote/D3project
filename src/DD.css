@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Catamaran');
 .title {
   font-weight: 900;
@@ -42,6 +43,7 @@
   letter-spacing: .5px;
   color: white;
   width: 230px;
+  font-family: 'Catamaran', sans-serif;
 }
 .leadTime {
   display: flex;
@@ -51,4 +53,5 @@
   letter-spacing: .5px;
   color: white;
   width: 230px;
+  font-family: 'Catamaran', sans-serif;
 }

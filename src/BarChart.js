@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
 import {observer} from 'mobx-react';
-import "./BarChart.css"
 
 
 const BarChart = observer(class BarChart extends Component {
@@ -42,7 +41,6 @@ const BarChart = observer(class BarChart extends Component {
       .attr('height', 650)
       .attr('width', 337)
       .attr('id', 'mainSvg')
-      .attr("class", "test");
     }
   drawAxis(context) {
     const {axisHeight} = this.props;
