@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {observer} from 'mobx-react';
-import './App.css';
 import './DD.css';
 
 const Value = observer(class Value extends Component {

@@ -12,7 +12,7 @@ export class dataStore {
       bookingTime: computed(() => {
         const final = Math.round(Math.round((100*this.currentTour['Summary Statistics']['Booking Lead Time']))/100);
         if (isNaN(this.currentTour['Summary Statistics']['Booking Lead Time']) === true){
-          return ('No Bookings Lead Time Data Available');
+          return ('No Booking Lead Time Data Available');
         }
         else{
           return 'Booking Lead Time: '+final+' Days';

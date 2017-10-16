@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
 import {observer} from 'mobx-react';
-
+import "./BarChart.css"
 
 
 const BarChart = observer(class BarChart extends Component {
@@ -35,12 +35,14 @@ const BarChart = observer(class BarChart extends Component {
     bars.remove();
     this.draw();
   }
-  setContext() {
+  setContext() {                //sets the frame for the axes
     return d3.select(this.refs.main).append('svg')
+      .style('position','absolute')
       .attr('transform', `translate(20,-200)`)
       .attr('height', 650)
       .attr('width', 337)
-      .attr('id', 'mainSvg');
+      .attr('id', 'mainSvg')
+      .attr("class", "test");
     }
   drawAxis(context) {
     const {axisHeight} = this.props;
@@ -58,13 +60,15 @@ const BarChart = observer(class BarChart extends Component {
         .tickPadding(4)
         .tickFormat(function(d,i){ return tickLabels[i] }));
     }
-  drawBars(){
+  drawBars() {              //sets up the bars
     const {bar1, bar2, bookings, events} = this.props;
     const bar = d3.select(this.refs.bar).append('svg')
+      .style('position','absolute')
+      .attr("class", "test")
       .attr('id', 'bars')
       .attr('height', 300)
       .attr('width', 130)
-      .attr('transform', `translate(181,-606)`)
+      .attr('transform', `translate(181,48)`)
       .append('g');
     bar.append('rect')
         .attr('height', bar1).attr('width', 40)
@@ -104,7 +108,7 @@ const BarChart = observer(class BarChart extends Component {
       .attr('transform',`translate(0,230)rotate(-90)`);
       return bar;
   }
-  labels(context){
+  labels(context){          //basic labels for the chart
     const { bookings, events } = this.props;
     context.append('svg')
       .attr('id', 'labels')

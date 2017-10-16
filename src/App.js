@@ -12,9 +12,10 @@ const App = observer(class App extends Component {
   render() {
     return(
       <div>
-        < Value
-          menuActive = { this.props.store.menuActive }
-          store = {this.props.store} />
+      < Value
+        menuActive = { this.props.store.menuActive }
+        store = {this.props.store} />
+
         < BarChart
           events = { this.props.store.events }
           bookings = { this.props.store.bookings }
@@ -22,6 +23,7 @@ const App = observer(class App extends Component {
           bar1 = { this.props.store.bar1 }
           bar2 = { this.props.store.bar2 }
           store = { this.props.store }/>
+
           < ProgressArc
               height={300}
               width={350}

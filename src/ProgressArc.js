@@ -61,7 +61,7 @@ class ProgressArc extends Component {
     return d3.select(this.refs.arc).append('svg')
       .attr('height', 300)
       .attr('width', 300)
-      .attr('transform', `translate(450,-1000)`)
+      .attr('transform', `translate(450,-40)`)
       .attr('id', id)
       .append('g')
       .attr('transform', `translate(150,150)`);
