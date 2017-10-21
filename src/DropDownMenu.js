@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {observer} from 'mobx-react';
 import './DD.css';
 
+//arbitrary comment to test herokus
+
 const Value = observer(class Value extends Component {
   propTypes: {
     menuActive: Props.Types.bool;
