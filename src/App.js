@@ -14,7 +14,8 @@ const App = observer(class App extends Component {
       <div>
       < Value
         menuActive = { this.props.store.menuActive }
-        store = {this.props.store} />
+        store = {this.props.store}
+        className = 'val'/>
 
         < BarChart
           events = { this.props.store.events }
@@ -25,15 +26,14 @@ const App = observer(class App extends Component {
           store = { this.props.store }/>
 
           < ProgressArc
-              height={300}
-              width={350}
-              innerRadius={120}
+              innerRadius={0}
               outerRadius={150}
               id="d3-arc"
               backgroundColor="#e6e6e6"
               foregroundColor="#f29d35"
               averageCap={this.props.store.averageCap}
-              duration={2000}
+              average={this.props.store.average}
+              duration={1300}
           />
       </div>
     );

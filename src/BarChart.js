@@ -120,7 +120,6 @@ const BarChart = observer(class BarChart extends Component {
       .style('letter-spacing',1)
       .style('fill','white')
       .style("font-size", "23px")
-      .style("text-decoration", "italic")
       .text("Bookings And Events")
       .attr('transform', `translate(65,90)`);
     context.append('svg')
@@ -134,7 +133,6 @@ const BarChart = observer(class BarChart extends Component {
       .style('letter-spacing',10)
       .style('fill','white')
       .style("font-size", "15px")
-      .style("text-decoration", "italic")
       .text("TOTAL AMOUNT")
       .attr('transform', `translate(-60,545)rotate(-90)`);
     context.append('svg')
@@ -148,7 +146,6 @@ const BarChart = observer(class BarChart extends Component {
       .style('letter-spacing',10)
       .style('fill','white')
       .style("font-size", "15")
-      .style("text-decoration", "italic")
       .text("TYPE")
       .attr('transform', `translate(70,515)`);
     if (bookings === undefined){
@@ -163,7 +160,6 @@ const BarChart = observer(class BarChart extends Component {
       .style('letter-spacing',2)
       .style('fill','white')
       .style("font-size", "12")
-      .style("text-decoration", "italic")
       .text("No Bookings Data Available")
       .attr('transform',`translate(87,570)rotate(-90)`);
     }
@@ -179,7 +175,6 @@ const BarChart = observer(class BarChart extends Component {
       .style('letter-spacing',2)
       .style('fill','white')
       .style("font-size", "12")
-      .style("text-decoration", "italic")
       .text("No Events Data Available")
       .attr('transform',`translate(165,570)rotate(-90)`);
 

@@ -11,15 +11,14 @@ const Value = observer(class Value extends Component {
     bar1: PropTypes.number,
     bar2: PropTypes.number,
     averageCap: PropTypes.number,
-    average: PropTypes.number,
     bookingTime: PropsTypes.number,
   }
 
-
   render(){
-    const { listOfNames, setCurrentTour, average, bookingTime, tourName } = this.props.store;
+    const { listOfNames, setCurrentTour, bookingTime, tourName } = this.props.store;
     return(
     <div>
+    <div className = 'container'>
     <div className='tour-content'>
       <ul> {
       listOfNames.map(el => (
@@ -28,10 +27,11 @@ const Value = observer(class Value extends Component {
       }
       </ul>
       </div>
+      </div>
     <h1 className = 'title'>{tourName}</h1>
-    <h2 className = 'averageCap'>{average}</h2>
     <h2 className = 'leadTime'>{bookingTime}</h2>
     </div>
+
 
     )
   }

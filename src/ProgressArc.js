@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
+import './arc.css';
+import {observer} from 'mobx-react';
 
 
-
-class ProgressArc extends Component {
+const ProgressArc = observer(class ProgressArc extends Component {
   displayName: 'ProgressArc';
 
   propTypes: {
@@ -14,7 +15,8 @@ class ProgressArc extends Component {
     outerRadius: PropTypes.number,
     backgroundColor: PropTypes.string,
     foregroundColor: PropTypes.string,
-    averageCap: PropTypes.number
+    average: PropTypes.number,
+    averageCap: PropTypes.number,
   }
 
   componentDidMount() {
@@ -28,8 +30,8 @@ class ProgressArc extends Component {
     const context = this.setContext();
     this.setBackground(context);
     this.setForeground(context);
-    this.labels(context);
     this.updatePercent(context);
+    this.txt(context);
   }
 
   redrawArc() {
@@ -60,17 +62,10 @@ class ProgressArc extends Component {
     return d3.select(this.refs.arc).append('svg')
       .attr('height', 300)
       .attr('width', 300)
-      .attr('transform', `translate(450,-40)`)
+      .attr('transform', `translate(440,-40)`)
       .attr('id', id)
       .append('g')
       .attr('transform', `translate(150,150)`);
-  }
-  labels(context){
-    const text = context.append('path')
-        .attr('id','tpath');
-    text.append('textPath')
-      .attr("xlink:href","#tpath")
-      .text("My counter text");
   }
   setBackground(context) {
     const { backgroundColor } = this.props;
@@ -90,18 +85,35 @@ class ProgressArc extends Component {
   }
 
   tau = Math.PI * 2;
+  txt(context) {
+    const { average } = this.props;
+    var txt = context.append('text')
+      .attr('height', 200)
+      .attr('width', 400)
+      .attr('x', 10 )
+      .attr('y',  -60 )
+      .style('text-anchor', "middle")
+      .style('letter-spacing','.5')
+      .style('fill','white')
+      .style("font-size", "15px")
+      .text(average);
 
-  arc() {
-    return d3.arc()
-      .innerRadius(this.props.innerRadius)
-      .outerRadius(this.props.outerRadius)
-      .startAngle(0);
-  }
+      return txt;
+    }
+    arc() {
+      return d3.arc()
+        .innerRadius(this.props.innerRadius)
+        .outerRadius(this.props.outerRadius)
+        .startAngle(0);
+    }
+
+
+
   render() {
     return (
       <div ref="arc"></div>
 
     )
   }
-}
+});
 export default ProgressArc;

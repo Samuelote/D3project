@@ -1,11 +1,12 @@
-@font-face { font-family: 'Enso'; src: url('./enso.ttf') format('truetype'); font-weight: normal;
-  font-style: normal;}
-@import url('https://fonts.googleapis.com/css?family=Catamaran');
-  .title {
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 900;
-  }
 
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+html {
+    height: 100%;
+}
 body {
-  background: linear-gradient(to left, #5bd3c5, #1e9e8f);
+  height: 100%;
+   margin: 0;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-image: repeating-linear-gradient(to left, #5bd3c5, #1e9e8f);
 }
