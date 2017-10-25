@@ -62,7 +62,7 @@ const ProgressArc = observer(class ProgressArc extends Component {
     return d3.select(this.refs.arc).append('svg')
       .attr('height', 300)
       .attr('width', 300)
-      .attr('transform', `translate(440,-40)`)
+      // .attr('transform', `translate(440,-40)`)
       .attr('id', id)
       .append('g')
       .attr('transform', `translate(150,150)`);
@@ -111,8 +111,9 @@ const ProgressArc = observer(class ProgressArc extends Component {
 
   render() {
     return (
+    <div>
       <div ref="arc"></div>
-
+    </div>
     )
   }
 });

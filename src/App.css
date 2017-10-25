@@ -10,3 +10,34 @@ body {
    background-attachment: fixed;
    background-image: repeating-linear-gradient(to left, #5bd3c5, #1e9e8f);
 }
+.leadTime {
+  letter-spacing: .5px;
+  color: white;
+  width: 230px;
+  font-family: 'Catamaran', sans-serif;
+  margin-left: 35%;
+  font-weight: 100;
+}
+.title {
+  letter-spacing: .5px;
+  color: white;
+  font-family: 'Catamaran', sans-serif;
+  justify-content: center;
+  height: 100px;
+  text-align: center;
+}
+.columnLayout {
+  display: flex;
+}
+.mainColumn {
+  flex: 1;
+  order: 2;
+}
+.left {
+  flex: 1;
+  order: 1;
+}
+.right {
+  flex: 1;
+  order: 3;
+}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {observer} from 'mobx-react';
 import './DD.css';
 
-//arbitrary comment to test herokus
 
 const Value = observer(class Value extends Component {
   propTypes: {
@@ -30,8 +29,6 @@ const Value = observer(class Value extends Component {
       </ul>
       </div>
       </div>
-    <h1 className = 'title'>{tourName}</h1>
-    <h2 className = 'leadTime'>{bookingTime}</h2>
     </div>
 
 

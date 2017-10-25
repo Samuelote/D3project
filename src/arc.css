@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran');
 
 body {
+  /*display: flex;*/
   font-family: 'Catamaran', sans-serif;
+  /*justify-content: center;*/
 }
